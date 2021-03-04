@@ -1,0 +1,33 @@
+<hr />
+        <!-- One-way data binding -->
+        <h1> {{tutorialObject.title}} </h1>
+        <h2> {{tutorialObject.subtitle}} </h2>
+
+        <p> Number: {{2 + 2}} </p>
+        <p> String: {{tutorialObject.firstName + " " + tutorialObject.lastName | uppercase}} </p>
+        <p><b>Binding: {{tutorialObject.bindOutput | currency: "R$ ": "4"}} </b></p>
+
+        <!-- Two-way data-binding -->
+        <label>First name:</label>
+        <input type="text" ng-model="tutorialObject.firstName">
+        <br />
+      
+        <label>Last name:</label>
+        <!-- With ng-model => it is a best practive to create an object at the controller
+        and then create it's variables to prevent reference erros in the future -->
+        <input type="text" ng-model="tutorialObject.lastName | lowercase">
+        <br />
+
+        <button ng-click="timesTwo()">Multiply for the double</button>
+        <button ng-click="pythagoeramTheorem()">Pythagoeram Theorem</button>
+
+        <!-- Creating directives -->
+        <!-- *! CammelCase does not supported -->
+        
+        <!-- As an attribute: -->
+        <span vq-greeting-message></span>  
+        <!-- As an element: -->
+        <vq-greeting-message></vq-greeting-message>
+
+        <br />
+        <a href="#/second-tutorial">Tutorial Second Page</a>
