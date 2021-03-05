@@ -15,36 +15,36 @@ angular.module("tutorialApp", [])
         $scope.tutorialObject.bindOutput = Calculations.timesTwo($scope.tutorialObject.bindOutput)
     };
 
-    $scope.pythagoeramTheorem = function() {
-        $scope.tutorialObject.bindOutput = Calculations.pythagoeramTheorem($scope.tutorialObject.bindOutput, $scope.tutorialObject.bindOutput)
-    }
+    // $scope.pythagoeramTheorem = function() {
+    //     $scope.tutorialObject.bindOutput = Calculations.pythagoeramTheorem($scope.tutorialObject.bindOutput, $scope.tutorialObject.bindOutput)
+    // }
 
 }])
 
-.directive("vqGreetingMessage", function(){
-    return {
-        // A === attribute, E === element
-        restrict: "AE",
-        template: "<div>Howdy! How are you?</div>"
-    }
-})
+// .directive("vqGreetingMessage", function(){
+//     return {
+//         // A === attribute, E === element
+//         restrict: "AE",
+//         template: "<div>Howdy! How are you?</div>"
+//     }
+// })
 
-// Creating a service
+// // Creating a service
 
-.factory("Calculations", function() {
-    var calculations = { }; //object creation
+// .factory("Calculations", function() {
+//     var calculations = { }; //object creation
 
-    calculations.timesTwo = function(a) {
-        return a * 2;
-    };
+//     calculations.timesTwo = function(a) {
+//         return a * 2;
+//     };
 
-    calculations.pythagoeramTheorem = function(a, b) {
-        return (a * a) + (b * b);
-    }
+//     calculations.pythagoeramTheorem = function(a, b) {
+//         return (a * a) + (b * b);
+//     }
 
-    return calculations;
-})
+//     return calculations;
+// })
 
-.controller("TutorialCtrl2", ["$scope", function($scope) {
-    $scope.secondTutorial = "This is the second tutorial!";
-}]);
+// .controller("TutorialCtrl2", ["$scope", function($scope) {
+//     $scope.secondTutorial = "This is the second tutorial!";
+// }]);

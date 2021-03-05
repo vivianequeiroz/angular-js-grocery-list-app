@@ -1,9 +1,9 @@
-var app = angular.module('tutorialApp', ["ngRoute", "tutorialCtrl"]);
+var app = angular.module("tutorialApp", ["ngRoute", "TutorialCtrl"]);
 
 app.config(function($routeProvider){
     $routeProvider
         .when("/", {
-            templateUrl: "views/tutorial.html",
+            templateUrl: "tutorial.html",
             controller: "js/controllers/tutorialCtrl.js"
         })
 });
