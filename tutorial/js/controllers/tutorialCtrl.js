@@ -1,7 +1,7 @@
 // *! External modules are usually created to store functionalities
 angular.module("tutorialApp", [])
-
-.controller("TutorialCtrl",  ["$scope", "Calculations", function($scope, Calculations){
+//.controller("TutorialCtrlModule",  ["$scope", "Calculations", function($scope, Calculations)
+.controller("TutorialCtrlModule",  ["$scope", "Calculations", function($scope){
     // $scope.name = 'Viviane'
     $scope.tutorialObject = { }
     $scope.tutorialObject.title = "Main title";
@@ -11,8 +11,8 @@ angular.module("tutorialApp", [])
     $scope.tutorialObject.bindOutput = 2;
 
     $scope.timesTwo = function(){
-        // $scope.tutorialObject.bindOutput *= 2;
-        $scope.tutorialObject.bindOutput = Calculations.timesTwo($scope.tutorialObject.bindOutput)
+        $scope.tutorialObject.bindOutput *= 2;
+        // $scope.tutorialObject.bindOutput = Calculations.timesTwo($scope.tutorialObject.bindOutput)
     };
 
     // $scope.pythagoeramTheorem = function() {
@@ -21,15 +21,15 @@ angular.module("tutorialApp", [])
 
 }])
 
-// .directive("vqGreetingMessage", function(){
-//     return {
-//         // A === attribute, E === element
-//         restrict: "AE",
-//         template: "<div>Howdy! How are you?</div>"
-//     }
-// })
+.directive("vqGreetingMessage", function(){
+    return {
+        // A === attribute, E === element
+        restrict: "AE",
+        template: "<div>Howdy! How are you?</div>"
+    }
+})
 
-// // Creating a service
+// Creating a service
 
 // .factory("Calculations", function() {
 //     var calculations = { }; //object creation
@@ -45,6 +45,6 @@ angular.module("tutorialApp", [])
 //     return calculations;
 // })
 
-// .controller("TutorialCtrl2", ["$scope", function($scope) {
-//     $scope.secondTutorial = "This is the second tutorial!";
-// }]);
+.controller("TutorialCtrl2", ["$scope", function($scope) {
+    $scope.secondTutorial = "This is the second tutorial!";
+}]);
