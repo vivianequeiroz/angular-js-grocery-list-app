@@ -1,6 +1,3 @@
-/**
- * Created by Thomas on 5/28/2015.
- */
 var app = angular.module('groceryListApp', ["ngRoute"]);
 
 app.config(function($routeProvider){
@@ -13,6 +10,11 @@ app.config(function($routeProvider){
             templateUrl: "views/addItem.html",
             controller: "GroceryListItemsController"
         })
+        //passing parameters
+        .when("/addItem/:id",{
+            templateUrl: "views/addItem.html",
+            controller: "GroceryListItemsController"
+        })
         .otherwise({
             redirectTo: "/"
         })
@@ -22,7 +24,7 @@ app.controller("HomeController", ["$scope", function($scope) {
     $scope.appTitle = "Grocery List";
 }]);
 
-app.controller("GroceryListItemsController", ["$scope", function($scope){
+app.controller("GroceryListItemsController", ["$scope",  "$routeParams", function($scope, $routeParams){
 
     $scope.groceryItems = [
         {completed: true, itemName: 'milk', date: '2014-10-00'},
@@ -35,4 +37,5 @@ app.controller("GroceryListItemsController", ["$scope", function($scope){
         {completed: true, itemName: 'tortillas', date: '2014-10-04'}
     ]
 
+    $scope.rp = "Route Parameter value: " + $routeParams.id;
 }]);
