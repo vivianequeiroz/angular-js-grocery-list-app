@@ -20,7 +20,7 @@ app.config(function($routeProvider){
         })
 });
 
-app.controller("HomeController", ["$scope", function($scope) {
+app.controller("HomeController", "GroceryService", ["$scope", "GroceryService", function($scope) {
     $scope.appTitle = "Grocery List";
 }]);
 
