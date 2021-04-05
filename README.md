@@ -2,7 +2,7 @@
 
 
 <meta charset="utf-8">
-<h1 align="center">Grocery List </h1>
+<h1 align="center">Grocery List 🥣</h1>
 
 <h2 align="center">
 <a href="https://imgur.com/QAW7J8v"><img src="https://i.imgur.com/QAW7J8v.png" title="Grocery List" /></a>
