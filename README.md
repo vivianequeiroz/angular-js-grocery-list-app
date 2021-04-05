@@ -82,11 +82,11 @@
 
 ![check-item](img/check.gif)
 
-→ Directive <b>ng-click</b> binds the button with the HomeController
+→ Directive <b>ng-click</b> binds the button with the  $scope.markCompleted at "HomeControler"
 
-→ At the span tag >ng-Class</b> uses ternary operator to change the view of check or unchecked item
+→ groceryService.markCompleted() switches the entry state between completed and not(!) completed
 
-→
+→ At the span tag <b>ng-class</b> uses ternary operator to change the view of check or unchecked item base on entry state previously defined
   
 ---
 
